@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student report card</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  table{
+    border-collapse: collapse;
+  }
+  th ,td{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px 14px;
+  }
+  tfoot tr{
+    color: black;
+    font-weight: bold;
+  }
+    .red{
+      background-color: red;
+    }
+    .green{
+      background-color: green;
+    }
+    .orange{
+      background-color: orange;
+    }
+  
+  </style>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Marks</th>
+  </tr>
+  </thead>
+  <tbody id="student-table">
+    <!-- inserting the data form js -->
+  </tbody>
+  
+  <tfoot>
+    <tr>
+    <td>Average</td>
+    <td id="ave-Marks">0</td>
+    </tr>
+  </tfoot>
+</table>
+
+  <script src="studentReport.js"></script>
+  
+</body>
+</html>
