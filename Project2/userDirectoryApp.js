@@ -14,21 +14,22 @@ async function userDirectory() {
 }
 
 function showCards(users){
-  const container = document.getElementById("cards-container")
+  const container = document.getElementById("card-container")
   let allCards = "";
   users.forEach(user => {
     allCards += `<div class = "card">
     <h2>${user.name}</h2>
     </div>
     `
+     
   });
-  container.innerHTML = allCards;
+ container.innerHTML = allCards;
 }
 
 document.getElementById("search").addEventListener("input",function(){
   const typed = this.value.toLowerCase()
   // filter users where name includes what you typed 
-  const filtered = users.filter(user => user.name.toLowerCase().includes(type))
+  const filtered = allUsers.filter(user => user.name.toLowerCase().includes(typed))
   showCards(filtered)
 })
 userDirectory()
