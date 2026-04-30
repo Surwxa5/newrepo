@@ -3,6 +3,7 @@
 async function userDirectory() {
   try{
     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+
     const data = await response.json()
     allUsers = data
     document.getElementById("loading").style.display = "none"
@@ -18,7 +19,10 @@ function showCards(users){
   let allCards = "";
   users.forEach(user => {
     allCards += `<div class = "card">
-    <h2>${user.name}</h2>
+    <h2>Name:${user.name}</h2>
+    <h3>Company${user.company.name}</h3>
+    <h4>Email:${user.email}</h4>
+    <h4>City:${user.address.city}</h4>
     </div>
     `
      
@@ -33,3 +37,5 @@ document.getElementById("search").addEventListener("input",function(){
   showCards(filtered)
 })
 userDirectory()
+
+
